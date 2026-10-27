@@ -1,0 +1,6 @@
+{
+  "name": "Angie's Salon — Luxury DHA Karachi Beauty Sanctuary",
+  "description": "Premier luxury beauty salon in DHA Phase 5, Karachi. Signature hair styling, luminous facials, bridal artistry, manicures, and online booking with WhatsApp concierge.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
