@@ -67,12 +67,12 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onBookService }) => {
               <img
                 src={
                   item.category === 'Bridal'
-                    ? '/src/assets/images/service_bridal_glam_1793132482542.jpg'
+                    ? '/images/service_bridal_glam.jpg'
                     : item.category === 'Hair' || item.category === 'Before & After'
-                    ? '/src/assets/images/service_balayage_silk_1793132482307.jpg'
+                    ? '/images/service_balayage_silk.jpg'
                     : item.category === 'Skin'
-                    ? '/src/assets/images/service_facial_radiance_1793132482015.jpg'
-                    : '/src/assets/images/hero_angies_salon_1793132482423.jpg'
+                    ? '/images/service_facial_radiance.jpg'
+                    : '/images/hero_angies_salon.jpg'
                 }
                 alt={item.title}
                 className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700"

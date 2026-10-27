@@ -50,7 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
             aria-label="Angie's Salon Home"
           >
             <img
-              src="/assets/aistudio/Angie_s_Salon_98601cce.png"
+              src="/images/logo.png"
               alt="Angie's Salon"
               className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
             />

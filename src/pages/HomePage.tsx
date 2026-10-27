@@ -32,7 +32,7 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#F8E1E7] shadow-xs text-xs font-medium text-[#7A4050]">
               <img
-                src="/assets/aistudio/fav-icon_ddac59ed.png"
+                src="/images/fav-icon.png"
                 alt="Angie's Salon Emblem"
                 className="w-5 h-5 object-contain"
               />
@@ -81,7 +81,7 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
           {/* Hero Visual Salon Ambiance Showcase */}
           <div className="mt-12 relative max-w-4xl mx-auto rounded-3xl overflow-hidden border border-[#F8E1E7] shadow-2xl group">
             <img
-              src="/src/assets/images/hero_angies_salon_1793132482423.jpg"
+              src="/images/hero_angies_salon.jpg"
               alt="Angie's Salon Luxury Studio in DHA Phase 5 Karachi"
               className="w-full h-64 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-700"
             />
@@ -150,10 +150,10 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredServices.map((service) => {
             const getServiceImage = () => {
-              if (service.category === 'Hair') return '/src/assets/images/service_balayage_silk_1793132482307.jpg';
-              if (service.category === 'Bridal') return '/src/assets/images/service_bridal_glam_1793132482542.jpg';
-              if (service.category === 'Skin') return '/src/assets/images/service_facial_radiance_1793132482015.jpg';
-              return '/src/assets/images/hero_angies_salon_1793132482423.jpg';
+              if (service.category === 'Hair') return '/images/service_balayage_silk.jpg';
+              if (service.category === 'Bridal') return '/images/service_bridal_glam.jpg';
+              if (service.category === 'Skin') return '/images/service_facial_radiance.jpg';
+              return '/images/hero_angies_salon.jpg';
             };
 
             return (
@@ -267,7 +267,7 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
               <div className="rounded-3xl overflow-hidden bg-white border border-[#F8E1E7] shadow-xl relative z-1">
                 <div className="relative h-64 sm:h-72 w-full overflow-hidden">
                   <img
-                    src="/src/assets/images/service_bridal_glam_1793132482542.jpg"
+                    src="/images/service_bridal_glam.jpg"
                     alt="Signature Bridal Glam at Angie's Salon"
                     className="w-full h-full object-cover object-top"
                   />

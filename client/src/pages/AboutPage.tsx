@@ -54,14 +54,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         <div className="bg-gradient-to-br from-[#FFF9F5] via-[#F8E1E7]/40 to-[#FFF9F5] rounded-3xl p-6 sm:p-8 border border-[#F8E1E7] space-y-6">
           <div className="rounded-2xl overflow-hidden border border-[#F8E1E7] shadow-md h-52 sm:h-60 relative">
             <img
-              src="/src/assets/images/hero_angies_salon_1793132482423.jpg"
+              src="/images/hero_angies_salon.jpg"
               alt="Angie's Salon Studio Interior DHA Phase 5 Karachi"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4 text-white">
               <div className="flex items-center gap-2">
                 <img
-                  src="/assets/aistudio/fav-icon_ddac59ed.png"
+                  src="/images/fav-icon.png"
                   alt="Emblem"
                   className="w-6 h-6 object-contain"
                 />

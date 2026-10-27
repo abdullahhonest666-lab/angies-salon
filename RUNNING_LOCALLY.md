@@ -10,9 +10,8 @@ This project has been structured with **Frontend Alag (`/client`)** and **Backen
 angies-salon/
 ├── client/                     # 🎨 FRONTEND (React 19 + Vite + Tailwind CSS)
 │   ├── public/
-│   │   └── assets/aistudio/    # Official Logo & Favicon
+│   │   └── images/             # All salon images, logo, & favicon
 │   ├── src/
-│   │   ├── assets/images/      # High-res Salon Photography
 │   │   ├── components/         # Navbar, Footer, WhatsAppWidget, Lightbox, etc.
 │   │   ├── data/               # Static Salon Content & Seed Services
 │   │   ├── pages/              # Home, Services, About, Gallery, Book, Contact, Admin

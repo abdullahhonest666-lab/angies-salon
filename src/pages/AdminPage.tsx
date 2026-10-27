@@ -154,7 +154,7 @@ export const AdminPage: React.FC = () => {
           <div className="text-center space-y-2">
             <div className="flex justify-center mb-3">
               <img
-                src="/assets/aistudio/Angie_s_Salon_98601cce.png"
+                src="/images/logo.png"
                 alt="Angie's Salon"
                 className="h-14 w-auto object-contain"
               />

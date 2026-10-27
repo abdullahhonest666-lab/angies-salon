@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-4">
             <div className="bg-[#FFF9F5] p-2.5 rounded-2xl inline-block shadow-xs">
               <img
-                src="/assets/aistudio/Angie_s_Salon_98601cce.png"
+                src="/images/logo.png"
                 alt="Angie's Salon"
                 className="h-9 w-auto object-contain"
               />

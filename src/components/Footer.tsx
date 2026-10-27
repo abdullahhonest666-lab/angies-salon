@@ -13,11 +13,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#332D30]">
           {/* Brand & Story */}
           <div className="space-y-4">
-            <div className="bg-[#FFF9F5] p-1.5 rounded-2xl inline-block shadow-xs">
+            <div className="bg-[#FFF9F5] p-2.5 rounded-2xl inline-block shadow-xs">
               <img
-                src="/assets/aistudio/Angie_s_Salon_98601cce.png"
+                src="/images/logo.png"
                 alt="Angie's Salon"
-                className="h-14 w-auto object-contain"
+                className="h-9 w-auto object-contain"
               />
             </div>
             <p className="text-xs leading-relaxed text-[#B5ABA5]">
