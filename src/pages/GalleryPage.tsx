@@ -63,13 +63,13 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onBookService }) => {
             className="group cursor-pointer bg-white rounded-3xl overflow-hidden border border-[#F8E1E7] shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
           >
             {/* Visual Photography Canvas */}
-            <div className="relative flex h-64 sm:h-72 w-full items-center justify-center overflow-hidden bg-[#1E1E24]">
+            <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#1E1E24]">
               <img
                 src={item.image ?? '/images/hero_angies_salon.jpg'}
                 alt={item.title}
                 loading="lazy"
                 decoding="async"
-                className="max-w-full max-h-full object-contain"
+                className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex flex-col justify-end p-5 text-white">
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/25 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider mb-1.5 self-start">
