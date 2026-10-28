@@ -1,4 +1,33 @@
-import { Stylist, Review, GalleryItem } from '../types';
+import { Stylist, GalleryItem } from '../types';
+import bridalPortrait from '../../imges/1 (1).jpg';
+import styledHair from '../../imges/1 (2).jpg';
+import bridalCloseup from '../../imges/1 (3).jpg';
+import bridalLook from '../../imges/1 (4).jpg';
+import floralHair from '../../imges/1 (5).jpg';
+import salonExterior from '../../imges/1 (6).jpg';
+import salonPortrait from '../../imges/1 (7).jpg';
+import salonVisit from '../../imges/1 (8).jpg';
+import bridalStyling from '../../imges/1 (9).jpg';
+import styledUpdo from '../../imges/1 (10).jpg';
+import weddingParty from '../../imges/1 (11).jpg';
+import makeupSession from '../../imges/1 (12).jpg';
+import salonEvent from '../../imges/1 (13).jpg';
+
+export const SALON_IMAGES = {
+  bridalPortrait,
+  styledHair,
+  bridalCloseup,
+  bridalLook,
+  floralHair,
+  salonExterior,
+  salonPortrait,
+  salonVisit,
+  bridalStyling,
+  styledUpdo,
+  weddingParty,
+  makeupSession,
+  salonEvent,
+};
 
 export const SALON_INFO = {
   name: "Angie's Salon",
@@ -12,8 +41,8 @@ export const SALON_INFO = {
   email: "appointments@angiesalon.com",
   instagram: "@angiesalondha",
   facebook: "Angie's Salon DHA Karachi",
-  rating: 4.8,
-  totalReviews: 229,
+  googleMapsUrl: "https://www.google.com/maps/place/Angie's+Salon+and+institute/@24.8144609,67.0508242,17z/data=!4m17!1m10!3m9!1s0x3eb33c52fc9215ff:0xd1a477d4a08f757f!2sAngie's+Salon+and+institute!8m2!3d24.8144609!4d67.0508242!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11c1mp8b_x!3m5!1s0x3eb33c52fc9215ff:0xd1a477d4a08f757f!8m2!3d24.8144609!4d67.0508242!16s%2Fg%2F11c1mp8b_x?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+  lookupUrl: 'https://www.lookup.pk/company/122964-Angie-Salon',
   hours: [
     { days: "Monday – Saturday", time: "10:30 AM – 8:30 PM" },
     { days: "Sunday", time: "12:00 PM – 7:00 PM" },
@@ -55,117 +84,110 @@ export const STYLISTS: Stylist[] = [
   },
 ];
 
-export const REVIEWS: Review[] = [
-  {
-    id: 'rev-1',
-    author: 'Ayesha Siddiqui',
-    location: 'DHA Phase 6, Karachi',
-    rating: 5,
-    date: 'March 2026',
-    service: 'Barat Royal Bridal Makeup',
-    comment: 'Angie made my wedding day unforgettable! The makeup stayed radiant and dewy through 8 hours of photography and tears. The ambiance in Khadda Market is calm, private, and so luxurious. Highly recommend!',
-  },
-  {
-    id: 'rev-2',
-    author: 'Mahnoor Farooq',
-    location: 'Clifton Block 4, Karachi',
-    rating: 5,
-    date: 'February 2026',
-    service: 'Luxe Balayage & Blowdry',
-    comment: 'Zara is an absolute magician with color. My dark brown hair was lifted to the softest honey caramel without any damage. Angie’s Salon is easily the cleanest, most professional salon in DHA.',
-  },
-  {
-    id: 'rev-3',
-    author: 'Dr. Fatima Tariq',
-    location: 'DHA Phase 5, Karachi',
-    rating: 5,
-    date: 'January 2026',
-    service: 'Hydra-Glow Medical Grade Facial',
-    comment: 'As a medical professional, I am extremely particular about hygiene and sterilization. Angie’s Salon blew me away with their sanitized tools and medical-grade gentle techniques. My skin has never looked so clear.',
-  },
-  {
-    id: 'rev-4',
-    author: 'Rabia Jahangir',
-    location: 'DHA Phase 8, Karachi',
-    rating: 5,
-    date: 'December 2025',
-    service: 'Royal Rose Petal Manicure & Pedicure',
-    comment: 'Pure pampering! The rose petal foot soak and massage melted away all my work stress. Clean towels, lovely staff, and warm jasmine green tea served throughout.',
-  },
-  {
-    id: 'rev-5',
-    author: 'Natasha Khan',
-    location: 'PECHS, Karachi',
-    rating: 5,
-    date: 'November 2025',
-    service: 'Brazilian Keratin Silk Therapy',
-    comment: 'Karachi humidity used to destroy my hair within 10 minutes of stepping outside. After Angie’s keratin treatment, my hair is silky, straight, and completely frizz-free even in monsoon season!',
-  },
-];
-
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-1',
-    title: 'Imperial Barat Bridal Glow',
+    title: 'Bridal Portrait',
     category: 'Bridal',
-    description: 'Airbrushed radiant complexion with soft burgundy smokey eye and traditional jewelry setting.',
-    tag: 'Signature Bridal',
+    description: 'A bridal makeup look with traditional jewelry and a softly draped dupatta.',
+    tag: 'Bridal Artistry',
+    image: SALON_IMAGES.bridalPortrait,
   },
   {
     id: 'gal-2',
-    title: 'Sun-Kissed Toffee Balayage',
+    title: 'Soft, Styled Waves',
     category: 'Hair',
-    description: 'Hand-painted dimensional balayage with high-contrast curtain bangs and silk blowout.',
-    tag: 'Master Color',
+    description: 'Glossy, softly curled hair styled for a special occasion.',
+    tag: 'Hair Styling',
+    image: SALON_IMAGES.styledHair,
   },
   {
     id: 'gal-3',
-    title: 'Hydra-Facial Dewy Finish',
-    category: 'Skin',
-    description: 'Immediate porcelain glow after 75-minute vortex suction and peptide infusion.',
-    tag: 'Clinical Glow',
+    title: 'Bridal Makeup Detail',
+    category: 'Bridal',
+    description: 'A close-up look at bridal makeup and traditional adornments.',
+    tag: 'Bridal Artistry',
+    image: SALON_IMAGES.bridalCloseup,
   },
   {
     id: 'gal-4',
-    title: 'Russian Nude Gloss Nails',
-    category: 'Nails',
-    description: 'Ultra-clean e-file cuticle prep with milky blush gel polish and micro-chrome tips.',
-    tag: 'Nail Couture',
+    title: 'Wedding Day Look',
+    category: 'Bridal',
+    description: 'A complete occasion look finished with detailed traditional embellishments.',
+    tag: 'Bridal Artistry',
+    image: SALON_IMAGES.bridalLook,
   },
   {
     id: 'gal-5',
-    title: 'Nikkah Pastel Radiance',
+    title: 'Floral Hair Styling',
     category: 'Bridal',
-    description: 'Romantic blush tones, highlighted cheekbones, and soft waves draped with bridal dupatta.',
-    tag: 'Nikkah Glam',
+    description: 'Long hair styled with fresh flowers for a festive occasion.',
+    tag: 'Occasion Styling',
+    image: SALON_IMAGES.floralHair,
   },
   {
     id: 'gal-6',
-    title: 'Brazilian Keratin Transformation',
-    category: 'Before & After',
-    description: 'From frizzy coarse curls to mirror-flat, humidity-resistant silk strands.',
-    tag: 'Keratin Care',
+    title: 'Salon Exterior',
+    category: 'Salon',
+    description: 'A view of the salon from the street.',
+    tag: 'Visit Us',
+    image: SALON_IMAGES.salonExterior,
   },
   {
     id: 'gal-7',
-    title: 'Smokey Velvet Reception Look',
-    category: 'Bridal',
-    description: 'Charcoal sculpted liner, nude matte lips, and voluminous Hollywood waves.',
-    tag: 'Reception Style',
+    title: 'Salon Portrait',
+    category: 'Salon',
+    description: 'A portrait from inside the salon.',
+    tag: 'Salon Moments',
+    image: SALON_IMAGES.salonPortrait,
   },
   {
     id: 'gal-8',
-    title: 'Micro-Steamed Caviar Revival',
-    category: 'Hair',
-    description: 'Restorative scalp and strand rejuvenation treatment for chemically treated hair.',
-    tag: 'Hair Spa',
+    title: 'A Visit to the Salon',
+    category: 'Salon',
+    description: 'A client and stylist sharing a moment during a salon visit.',
+    tag: 'Salon Moments',
+    image: SALON_IMAGES.salonVisit,
   },
   {
     id: 'gal-9',
-    title: 'Mehndi Festive Sunset Glam',
+    title: 'Bridal Styling Session',
     category: 'Bridal',
-    description: 'Warm terracotta eyeshadow with golden shimmer and textured floral braids.',
-    tag: 'Mehndi Glow',
+    description: 'A stylist prepares a bride for her special day.',
+    tag: 'Bridal Artistry',
+    image: SALON_IMAGES.bridalStyling,
+  },
+  {
+    id: 'gal-10',
+    title: 'Classic Updo',
+    category: 'Hair',
+    description: 'A polished updo finished with decorative hair accessories.',
+    tag: 'Hair Styling',
+    image: SALON_IMAGES.styledUpdo,
+  },
+  {
+    id: 'gal-11',
+    title: 'Wedding Party',
+    category: 'Salon',
+    description: 'A group portrait from a wedding celebration.',
+    tag: 'Salon Moments',
+    image: SALON_IMAGES.weddingParty,
+  },
+  {
+    id: 'gal-12',
+    title: 'Makeup Session',
+    category: 'Bridal',
+    description: 'A makeup artist works with a client at the salon.',
+    tag: 'Bridal Artistry',
+    image: SALON_IMAGES.makeupSession,
+  },
+  {
+    id: 'gal-13',
+    title: 'Salon Event',
+    category: 'Salon',
+    description: 'A moment from an event with the salon community.',
+    tag: 'Salon Moments',
+    image: SALON_IMAGES.salonEvent,
   },
 ];
 

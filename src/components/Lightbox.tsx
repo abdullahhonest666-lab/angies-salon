@@ -32,15 +32,7 @@ export const Lightbox: React.FC<LightboxProps> = ({ item, onClose, onBookService
         {/* Visual Showcase with Photography */}
         <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-[#1E1E24]">
           <img
-            src={
-              item.category === 'Bridal'
-                ? '/images/service_bridal_glam.jpg'
-                : item.category === 'Hair' || item.category === 'Before & After'
-                ? '/images/service_balayage_silk.jpg'
-                : item.category === 'Skin'
-                ? '/images/service_facial_radiance.jpg'
-                : '/images/hero_angies_salon.jpg'
-            }
+            src={item.image ?? '/images/hero_angies_salon.jpg'}
             alt={item.title}
             className="w-full h-full object-cover object-center"
           />

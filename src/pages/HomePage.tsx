@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  Sparkles, Star, Calendar, ChevronRight, ShieldCheck, Heart, 
-  Award, Clock, CheckCircle2, ArrowRight, Instagram
+  Sparkles, Calendar, ChevronRight, ShieldCheck, Heart,
+  Award, Clock, CheckCircle2, ArrowRight, Instagram, MapPin, ExternalLink
 } from 'lucide-react';
 import { Service } from '../types';
-import { SALON_INFO, REVIEWS } from '../data/staticContent';
+import { SALON_INFO, SALON_IMAGES } from '../data/staticContent';
 
 interface HomePageProps {
   services: Service[];
@@ -12,8 +12,6 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-
   const featuredServices = services.filter((s) => s.popular).slice(0, 4);
 
   return (
@@ -28,23 +26,24 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
         <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C9A9A6_1px,transparent_1px)] [background-size:24px_24px] -z-10" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
-          {/* Trust Rating Badge with Official Crest */}
+          {/* Google Business Listing */}
           <div className="flex items-center justify-center gap-2 mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#F8E1E7] shadow-xs text-xs font-medium text-[#7A4050]">
+            <a
+              href={SALON_INFO.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#F8E1E7] shadow-xs text-xs font-medium text-[#7A4050] hover:text-[#9A4E65]"
+            >
               <img
                 src="/images/fav-icon.png"
                 alt="Angie's Salon Emblem"
                 className="w-5 h-5 object-contain"
               />
-              <div className="flex text-[#D4AF37]">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                ))}
-              </div>
-              <span className="font-semibold text-[#1E1E24]">4.8 ★</span>
-              <span className="text-[#8C827D]">· Over 229 Google Reviews</span>
+              <MapPin className="w-3.5 h-3.5" />
+              <span className="font-semibold text-[#1E1E24]">View Google listing & reviews</span>
               <span className="hidden sm:inline text-[#8C827D]">· DHA Phase 5 Karachi</span>
-            </div>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
 
           {/* Main Headline */}
@@ -81,8 +80,8 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
           {/* Hero Visual Salon Ambiance Showcase */}
           <div className="mt-12 relative max-w-4xl mx-auto rounded-3xl overflow-hidden border border-[#F8E1E7] shadow-2xl group">
             <img
-              src="/images/hero_angies_salon.jpg"
-              alt="Angie's Salon Luxury Studio in DHA Phase 5 Karachi"
+              src={SALON_IMAGES.bridalCloseup}
+              alt="Bridal makeup and traditional jewelry at Angie's Salon"
               className="w-full h-64 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end justify-between p-6 sm:p-8 text-left text-white">
@@ -150,10 +149,9 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredServices.map((service) => {
             const getServiceImage = () => {
-              if (service.category === 'Hair') return '/images/service_balayage_silk.jpg';
-              if (service.category === 'Bridal') return '/images/service_bridal_glam.jpg';
-              if (service.category === 'Skin') return '/images/service_facial_radiance.jpg';
-              return '/images/hero_angies_salon.jpg';
+              if (service.category === 'Hair') return SALON_IMAGES.styledHair;
+              if (service.category === 'Bridal') return SALON_IMAGES.bridalPortrait;
+              return SALON_IMAGES.salonVisit;
             };
 
             return (
@@ -164,7 +162,7 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
                 <div className="relative h-44 w-full overflow-hidden bg-[#F8E1E7]">
                   <img
                     src={getServiceImage()}
-                    alt={service.name}
+                    alt="Angie's Salon"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[10px] uppercase font-bold text-[#9A4E65] shadow-xs">
@@ -309,46 +307,55 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
         </div>
       </section>
 
-      {/* ================= TESTIMONIALS SPOTLIGHT ================= */}
+      {/* ================= REVIEWS & LISTING ================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs uppercase tracking-widest font-semibold text-[#9A4E65]">
-            Verified Praise
+            Find Us Online
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E1E24] mt-2">
-            Loved by Karachi’s Brides & Trendsetters
+            Reviews & Studio Information
           </h2>
           <p className="text-xs text-[#7A7277] mt-3">
-            Over 229 Google reviews with an average 4.8-star satisfaction rating
+            Visit our Google Maps profile for reviews and directions, or see our business listing on Lookup.pk.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {REVIEWS.slice(0, 3).map((review) => (
-            <div
-              key={review.id}
-              className="bg-white rounded-3xl p-6 sm:p-8 border border-[#F8E1E7] shadow-xs flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center gap-1 text-[#D4AF37] mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                  ))}
-                </div>
-                <p className="text-xs sm:text-sm text-[#4A4448] leading-relaxed italic mb-6">
-                  "{review.comment}"
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-[#F8E1E7]">
-                <p className="text-xs font-semibold text-[#1E1E24]">{review.author}</p>
-                <div className="flex items-center justify-between text-[11px] text-[#8C827D] mt-1">
-                  <span>{review.location}</span>
-                  <span className="text-[#9A4E65] font-medium">{review.service}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a
+            href={SALON_INFO.googleMapsUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-white rounded-3xl p-6 sm:p-8 border border-[#F8E1E7] shadow-xs hover:shadow-md transition-shadow"
+          >
+            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#9A4E65]">
+              <MapPin className="w-4 h-4" />
+              Google Maps
+            </span>
+            <h3 className="text-xl font-serif font-bold text-[#1E1E24] mt-3 group-hover:text-[#9A4E65]">
+              Read Reviews & Get Directions
+            </h3>
+            <p className="text-xs text-[#6B6368] mt-2">
+              Open Angie's Salon and institute on Google Maps.
+            </p>
+          </a>
+          <a
+            href={SALON_INFO.lookupUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group bg-white rounded-3xl p-6 sm:p-8 border border-[#F8E1E7] shadow-xs hover:shadow-md transition-shadow"
+          >
+            <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#9A4E65]">
+              <ExternalLink className="w-4 h-4" />
+              Lookup.pk
+            </span>
+            <h3 className="text-xl font-serif font-bold text-[#1E1E24] mt-3 group-hover:text-[#9A4E65]">
+              View Business Listing
+            </h3>
+            <p className="text-xs text-[#6B6368] mt-2">
+              See Angie's Salon's business profile on Lookup.pk.
+            </p>
+          </a>
         </div>
       </section>
 

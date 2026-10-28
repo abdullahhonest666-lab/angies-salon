@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Instagram, Facebook, Sparkles, Star, Heart } from 'lucide-react';
+import { MapPin, Phone, Clock, Instagram, Facebook, Sparkles, Heart } from 'lucide-react';
 import { SALON_INFO } from '../data/staticContent';
 
 interface FooterProps {
@@ -23,15 +23,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <p className="text-xs leading-relaxed text-[#B5ABA5]">
               Karachi’s refined sanctuary for haute couture bridal hair, customized color balayage, and clinical skincare aesthetics in DHA Phase 5.
             </p>
-            <div className="flex items-center gap-2 pt-2">
-              <div className="flex text-[#D4AF37]">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                ))}
-              </div>
-              <span className="text-xs font-semibold text-white">4.8 Rating</span>
-              <span className="text-xs text-[#998F8A]">· 229+ Google Reviews</span>
-            </div>
+            <a
+              href={SALON_INFO.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs text-[#C5BDB8] hover:text-white transition-colors"
+            >
+              Find us on Google Maps · Reviews & directions
+            </a>
           </div>
 
           {/* Quick Navigation */}
@@ -158,12 +157,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             © {new Date().getFullYear()} Angie's Salon. All rights reserved. Khadda Market, DHA Phase 5, Karachi.
           </p>
           <div className="flex items-center gap-6">
-            <button
-              onClick={() => onNavigate('admin')}
-              className="hover:text-white transition-colors underline cursor-pointer"
-            >
-              Staff Portal Login
-            </button>
             <span className="flex items-center gap-1 text-[11px]">
               Crafted with <Heart className="w-3 h-3 text-[#C9A9A6] fill-current" /> for Karachi Beauty
             </span>

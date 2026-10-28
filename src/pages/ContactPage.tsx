@@ -224,7 +224,7 @@ export const ContactPage: React.FC = () => {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://maps.google.com/maps?q=Khadda+Market,+Khayaban-e-Shamsheer,+DHA+Phase+5,+Karachi&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=24.8144609,67.0508242&t=&z=17&ie=UTF8&iwloc=&output=embed"
             />
           </div>
 
@@ -234,7 +234,7 @@ export const ContactPage: React.FC = () => {
               <p>Khadda Market, Khayaban-e-Shamsheer, near Stadium Commercial Area, DHA Phase 5</p>
             </div>
             <a
-              href="https://maps.google.com/?q=Khadda+Market+Khayaban-e-Shamsheer+DHA+Phase+5+Karachi"
+              href={SALON_INFO.googleMapsUrl}
               target="_blank"
               rel="noreferrer"
               className="px-4 py-2 text-xs font-semibold text-[#9A4E65] hover:underline whitespace-nowrap"
@@ -242,6 +242,14 @@ export const ContactPage: React.FC = () => {
               Open in Maps
             </a>
           </div>
+          <a
+            href={SALON_INFO.lookupUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex text-xs font-semibold text-[#9A4E65] hover:underline"
+          >
+            View our Lookup.pk business listing
+          </a>
         </div>
       </div>
     </div>

@@ -35,22 +35,13 @@ export interface Stylist {
   bio: string;
 }
 
-export interface Review {
-  id: string;
-  author: string;
-  location: string;
-  rating: number;
-  date: string;
-  service: string;
-  comment: string;
-}
-
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Hair' | 'Bridal' | 'Skin' | 'Nails' | 'Before & After';
+  category: 'Hair' | 'Bridal' | 'Skin' | 'Nails' | 'Before & After' | 'Salon';
   description: string;
   tag: string;
+  image?: string;
 }
 
 export interface ContactMessage {

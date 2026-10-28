@@ -1,4 +1,4 @@
-import { Service, Stylist, Review, GalleryItem } from '../src/types.js';
+import { Service, Stylist, GalleryItem } from '../src/types.js';
 
 export const INITIAL_SERVICES: Service[] = [
   // Hair
@@ -214,45 +214,6 @@ export const STYLISTS: Stylist[] = [
     experience: '6+ Years Experience',
     specialty: 'Russian Dry Manicures, Polygel Art & Brow Mapping',
     bio: 'Known for surgical precision and flawless cuticle work that keeps Karachi influencers returning week after week.',
-  },
-];
-
-export const REVIEWS: Review[] = [
-  {
-    id: 'rev-1',
-    author: 'Ayesha Siddiqui',
-    location: 'DHA Phase 6, Karachi',
-    rating: 5,
-    date: 'March 2026',
-    service: 'Barat Royal Bridal Makeup',
-    comment: 'Angie made my wedding day unforgettable! The makeup stayed fresh through 8 hours of photography and tears. The ambiance in Khadda Market is calm, private, and so luxurious. Highly recommend!',
-  },
-  {
-    id: 'rev-2',
-    author: 'Mahnoor Farooq',
-    location: 'Clifton Block 4, Karachi',
-    rating: 5,
-    date: 'February 2026',
-    service: 'Luxe Balayage & Blowdry',
-    comment: 'Zara is an absolute magician with color. My dark brown hair was lifted to the softest honey caramel without any damage. Angie’s Salon is easily the cleanest, most professional salon in DHA.',
-  },
-  {
-    id: 'rev-3',
-    author: 'Dr. Fatima Tariq',
-    location: 'DHA Phase 5, Karachi',
-    rating: 5,
-    date: 'January 2026',
-    service: 'Hydra-Glow Medical Grade Facial',
-    comment: 'As a dermatologist, I am extremely particular about hygiene and sterilization. Angie’s Salon blew me away with their sanitized tools and medical-grade gentle techniques. My skin has never looked so clear.',
-  },
-  {
-    id: 'rev-4',
-    author: 'Rabia Jahangir',
-    location: 'DHA Phase 8, Karachi',
-    rating: 5,
-    date: 'December 2025',
-    service: 'Royal Rose Petal Manicure & Pedicure',
-    comment: 'Pure pampering! The rose petal foot soak and massage melted away all my work stress. Clean towels, lovely staff, and warm jasmine green tea served throughout.',
   },
 ];
 

@@ -12,7 +12,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onBookService }) => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
-  const categories = ['All', 'Bridal', 'Hair', 'Skin', 'Nails', 'Before & After'];
+  const categories = ['All', 'Bridal', 'Hair', 'Salon'];
 
   const filteredItems = GALLERY_ITEMS.filter((item) => {
     if (activeCategory === 'All') return true;
@@ -65,15 +65,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onBookService }) => {
             {/* Visual Photography Canvas */}
             <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#F8E1E7]">
               <img
-                src={
-                  item.category === 'Bridal'
-                    ? '/images/service_bridal_glam.jpg'
-                    : item.category === 'Hair' || item.category === 'Before & After'
-                    ? '/images/service_balayage_silk.jpg'
-                    : item.category === 'Skin'
-                    ? '/images/service_facial_radiance.jpg'
-                    : '/images/hero_angies_salon.jpg'
-                }
+                src={item.image ?? '/images/hero_angies_salon.jpg'}
                 alt={item.title}
                 className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700"
               />

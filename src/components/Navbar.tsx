@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles, Calendar } from 'lucide-react';
+import { Menu, X, Calendar } from 'lucide-react';
 
 interface NavbarProps {
   currentTab: string;
@@ -24,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
     { id: 'about', label: 'About Us' },
     { id: 'gallery', label: 'Portfolio Gallery' },
     { id: 'contact', label: 'Contact & Map' },
-    { id: 'admin', label: 'Staff Portal' },
   ];
 
   const handleLinkClick = (id: string) => {

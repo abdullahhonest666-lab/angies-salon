@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sparkles, Shield, Heart, Award, CheckCircle } from 'lucide-react';
-import { STYLISTS, SALON_INFO } from '../data/staticContent';
+import { STYLISTS, SALON_INFO, SALON_IMAGES } from '../data/staticContent';
 
 interface AboutPageProps {
   onNavigate: (tab: string) => void;
@@ -43,10 +43,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               <h4 className="text-2xl font-serif font-bold text-[#9A4E65]">16+</h4>
               <p className="text-xs text-[#6B6368] mt-1">Years of master bridal & hair artistry in Karachi</p>
             </div>
-            <div className="p-4 rounded-2xl bg-white border border-[#F8E1E7]">
-              <h4 className="text-2xl font-serif font-bold text-[#D4AF37]">4.8 ★</h4>
-              <p className="text-xs text-[#6B6368] mt-1">From over 229 verified client reviews</p>
-            </div>
+            <a
+              href={SALON_INFO.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="p-4 rounded-2xl bg-white border border-[#F8E1E7] hover:border-[#C9A9A6] transition-colors"
+            >
+              <h4 className="text-base font-serif font-bold text-[#D4AF37]">Google Reviews</h4>
+              <p className="text-xs text-[#6B6368] mt-1">Read reviews on our Google Maps profile</p>
+            </a>
           </div>
         </div>
 
@@ -54,8 +59,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
         <div className="bg-gradient-to-br from-[#FFF9F5] via-[#F8E1E7]/40 to-[#FFF9F5] rounded-3xl p-6 sm:p-8 border border-[#F8E1E7] space-y-6">
           <div className="rounded-2xl overflow-hidden border border-[#F8E1E7] shadow-md h-52 sm:h-60 relative">
             <img
-              src="/images/hero_angies_salon.jpg"
-              alt="Angie's Salon Studio Interior DHA Phase 5 Karachi"
+              src={SALON_IMAGES.salonExterior}
+              alt="Angie's Salon exterior"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4 text-white">
