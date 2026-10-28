@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate }) => {
             <img
               src="/images/logo.png"
               alt="Angie's Salon"
-              className="h-10 h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
+              className="h-16 sm:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-102"
             />
           </button>
 
