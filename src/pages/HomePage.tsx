@@ -149,9 +149,10 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredServices.map((service) => {
             const getServiceImage = () => {
-              if (service.category === 'Hair') return SALON_IMAGES.styledHair;
-              if (service.category === 'Bridal') return SALON_IMAGES.bridalPortrait;
-              return SALON_IMAGES.salonVisit;
+              if (service.category === 'Hair') return '/images/service_balayage_silk.jpg';
+              if (service.category === 'Bridal') return '/images/service_bridal_glam.jpg';
+              if (service.category === 'Skin') return '/images/service_facial_radiance.jpg';
+              return '/images/hero_angies_salon.jpg';
             };
 
             return (
@@ -162,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
                 <div className="relative h-44 w-full overflow-hidden bg-[#F8E1E7]">
                   <img
                     src={getServiceImage()}
-                    alt="Angie's Salon"
+                    alt={service.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-[10px] uppercase font-bold text-[#9A4E65] shadow-xs">
