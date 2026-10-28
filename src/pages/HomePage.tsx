@@ -149,6 +149,10 @@ export const HomePage: React.FC<HomePageProps> = ({ services, onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredServices.map((service) => {
             const getServiceImage = () => {
+              if (service.id === 'hair-1') return SALON_IMAGES.styledHair;
+              if (service.id === 'hair-2') return '/images/service_balayage_silk.jpg';
+              if (service.id === 'hair-3') return SALON_IMAGES.styledUpdo;
+              if (service.id === 'skin-1') return '/images/service_facial_radiance.jpg';
               if (service.category === 'Hair') return '/images/service_balayage_silk.jpg';
               if (service.category === 'Bridal') return '/images/service_bridal_glam.jpg';
               if (service.category === 'Skin') return '/images/service_facial_radiance.jpg';
