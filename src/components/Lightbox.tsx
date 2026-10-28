@@ -30,11 +30,12 @@ export const Lightbox: React.FC<LightboxProps> = ({ item, onClose, onBookService
         </button>
 
         {/* Visual Showcase with Photography */}
-        <div className="relative h-80 sm:h-96 w-full overflow-hidden bg-[#1E1E24]">
+        <div className="relative flex h-80 sm:h-96 w-full items-center justify-center overflow-hidden bg-[#1E1E24]">
           <img
             src={item.image ?? '/images/hero_angies_salon.jpg'}
             alt={item.title}
-            className="w-full h-full object-cover object-center"
+            decoding="async"
+            className="max-w-full max-h-full object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-medium uppercase tracking-wider mb-2 self-start">

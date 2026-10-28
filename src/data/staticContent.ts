@@ -1,17 +1,17 @@
 import { Stylist, GalleryItem } from '../types';
-import bridalPortrait from '../../imges/1 (1).jpg';
-import styledHair from '../../imges/1 (2).jpg';
-import bridalCloseup from '../../imges/1 (3).jpg';
-import bridalLook from '../../imges/1 (4).jpg';
-import floralHair from '../../imges/1 (5).jpg';
-import salonExterior from '../../imges/1 (6).jpg';
-import salonPortrait from '../../imges/1 (7).jpg';
-import salonVisit from '../../imges/1 (8).jpg';
-import bridalStyling from '../../imges/1 (9).jpg';
-import styledUpdo from '../../imges/1 (10).jpg';
-import weddingParty from '../../imges/1 (11).jpg';
-import makeupSession from '../../imges/1 (12).jpg';
-import salonEvent from '../../imges/1 (13).jpg';
+import bridalPortrait from '../../imges/enhanced/1 (1).webp';
+import styledHair from '../../imges/enhanced/1 (2).webp';
+import bridalCloseup from '../../imges/enhanced/1 (3).webp';
+import bridalLook from '../../imges/enhanced/1 (4).webp';
+import floralHair from '../../imges/enhanced/1 (5).webp';
+import salonExterior from '../../imges/enhanced/1 (6).webp';
+import salonPortrait from '../../imges/enhanced/1 (7).webp';
+import salonVisit from '../../imges/enhanced/1 (8).webp';
+import bridalStyling from '../../imges/enhanced/1 (9).webp';
+import styledUpdo from '../../imges/enhanced/1 (10).webp';
+import weddingParty from '../../imges/enhanced/1 (11).webp';
+import makeupSession from '../../imges/enhanced/1 (12).webp';
+import salonEvent from '../../imges/enhanced/1 (13).webp';
 
 export const SALON_IMAGES = {
   bridalPortrait,
